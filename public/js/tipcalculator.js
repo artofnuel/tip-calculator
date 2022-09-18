@@ -37,18 +37,30 @@
 // console.log(title.innerText)
 
 // #### Now for the actual code
+// this will get the global variables
 
-let foodCost = document.getElementById('foodCost')
-let tipCost = document.getElementById('tipCost')
-let btnUp = document.getElementById('btnUp')
-let btnDown = document.getElementById('btnDown')
-let numOfPeople = document.getElementById('numOfPeople')
-let splitBill = document.getElementById('splitBill')
+let foodCost = document.getElementById('foodCost');
+let tipCost = document.getElementById('tipCost');
+let btnUp = document.getElementById('btnUp');
+let btnDown = document.getElementById('btnDown');
+let numOfPeople = document.getElementById('numOfPeople');
+let numberOfPeople = Number(numOfPeople.value);
+let splitBill = document.getElementById('splitBill');
 
-splitBill.innerText = '$0.00'
+// Setting some values to default
+
+splitBill.innerText = '$0.00';
 numOfPeople.value = 1;
-let numberOfPeople = Number(numOfPeople.value)
 
+// Now the calculate bill function
+// it will get the value of the food cost...
+// and the tip from the html input fields
+// it will then multiply them and add them...
+// for the total bill.
+// It will then split that bill across a number...
+// of people and update the html text continiously
+// onkeyup for the calculateBill()
+// onclick for the increase/decreasePeople() in html
 
 const calculateBill = () => {
     const bill = Number(foodCost.value)
@@ -80,3 +92,5 @@ const decreasePeople = () => {
         calculateBill()
     }
 };
+
+// complete!!!!
